@@ -1,0 +1,51 @@
+File to be opened: Test1.txt
+Source Code:
+hello
+...this
+is an
+equation
+ax + b = cx
+
+Lexical Analysis:
+Token                       	Lexeme
+-------------------------------------------------------
+Identifier                    	hello
+Invalid Input                 	...this
+Identifier                    	is
+Identifier                    	an
+Identifier                    	equation
+Identifier                    	ax
+Operator                      	+
+Identifier                    	b
+Operator                      	=
+Identifier                    	cx
+Lexeme: hello		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: is		Token: Identifier
+Error: '=' expected		Error at line 3
+<StatementListPrime> -> <StatementList>
+Lexeme: an		Token: Identifier
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: equation		Token: Identifier
+Error: '=' expected		Error at line 4
+<StatementListPrime> -> <StatementList>
+Lexeme: ax		Token: Identifier
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: +		Token: Operator
+Lexeme: b		Token: Identifier
+<StatementListPrime> -> <StatementList>
+Lexeme: =		Token: Operator
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement List Prime> -> Epsilon
+Lexeme: cx		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;

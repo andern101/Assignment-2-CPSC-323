@@ -1,0 +1,73 @@
+File to be opened: Test2.txt
+Source Code:
+y = mx + b
+this is the slope formula
+b = 15;
+
+Lexical Analysis:
+Token                       	Lexeme
+-------------------------------------------------------
+Identifier                    	y
+Operator                      	=
+Identifier                    	mx
+Operator                      	+
+Identifier                    	b
+Identifier                    	this
+Identifier                    	is
+Identifier                    	the
+Identifier                    	slope
+Identifier                    	formula
+Identifier                    	b
+Operator                      	=
+Integer                       	15
+Separator                     	;
+Lexeme: y		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: =		Token: Operator
+Lexeme: mx		Token: Identifier
+<Expression> -> <Term> <Expression Prime>
+<Term> -> <Factor> <Term Prime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier>
+Lexeme: +		Token: Operator
+<Term Prime> -> Epsilon
+<Expression Prime>-> + <Term> <Expression Prime>
+Lexeme: b		Token: Identifier
+<Term> -> <Factor> <Term Prime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier>
+Lexeme: this		Token: Identifier
+<Term Prime> -> Epsilon
+<Expression Prime> -> Epsilon
+Error: ';' expected		Error at line 2
+<StatementListPrime> -> <StatementList>
+Lexeme: is		Token: Identifier
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: the		Token: Identifier
+Error: '=' expected		Error at line 2
+<StatementListPrime> -> <StatementList>
+Lexeme: slope		Token: Identifier
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: formula		Token: Identifier
+Error: '=' expected		Error at line 2
+<StatementListPrime> -> <StatementList>
+Lexeme: b		Token: Identifier
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: =		Token: Operator
+Lexeme: 15		Token: Integer
+<Expression> -> <Term> <Expression Prime>
+<Term> -> <Factor> <Term Prime>
+<Factor> -> <Primary>
+<Primary> -> <Integer>
+Lexeme: ;		Token: Separator
+<Term Prime> -> Epsilon
+<Expression Prime> -> Epsilon

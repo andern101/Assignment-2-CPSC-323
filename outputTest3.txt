@@ -1,0 +1,157 @@
+File to be opened: Test3.txt
+Source Code:
+int num1;
+int num2;
+int num3;
+int t;
+
+num1 = 60; 
+num2 = 4; 
+num3 = 2;
+t = (num1 + num2) / num3;
+
+
+
+Lexical Analysis:
+Token                       	Lexeme
+-------------------------------------------------------
+Keyword                       	int
+Identifier                    	num1
+Separator                     	;
+Keyword                       	int
+Identifier                    	num2
+Separator                     	;
+Keyword                       	int
+Identifier                    	num3
+Separator                     	;
+Keyword                       	int
+Identifier                    	t
+Separator                     	;
+Identifier                    	num1
+Operator                      	=
+Integer                       	60
+Separator                     	;
+Identifier                    	num2
+Operator                      	=
+Integer                       	4
+Separator                     	;
+Identifier                    	num3
+Operator                      	=
+Integer                       	2
+Separator                     	;
+Identifier                    	t
+Operator                      	=
+Separator                     	(
+Identifier                    	num1
+Operator                      	+
+Identifier                    	num2
+Separator                     	)
+Operator                      	/
+Identifier                    	num3
+Separator                     	;
+Invalid Input                 	
+Lexeme: int		Token: Keyword
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement List Prime> -> Epsilon
+Lexeme: num1		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: ;		Token: Separator
+<Statement List Prime> -> Epsilon
+Lexeme: num2		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: ;		Token: Separator
+<Statement List Prime> -> Epsilon
+Lexeme: num3		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: ;		Token: Separator
+<Statement List Prime> -> Epsilon
+Lexeme: t		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: ;		Token: Separator
+Lexeme: num1		Token: Identifier
+<StatementListPrime> -> <StatementList>
+Lexeme: =		Token: Operator
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement List Prime> -> Epsilon
+Lexeme: 60		Token: Integer
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement List Prime> -> Epsilon
+Lexeme: ;		Token: Separator
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement List Prime> -> Epsilon
+Lexeme: num2		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: =		Token: Operator
+Lexeme: 4		Token: Integer
+<Expression> -> <Term> <Expression Prime>
+<Term> -> <Factor> <Term Prime>
+<Factor> -> <Primary>
+<Primary> -> <Integer>
+Lexeme: ;		Token: Separator
+<Term Prime> -> Epsilon
+<Expression Prime> -> Epsilon
+Lexeme: num3		Token: Identifier
+<StatementListPrime> -> <StatementList>
+Lexeme: =		Token: Operator
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement List Prime> -> Epsilon
+Lexeme: 2		Token: Integer
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement List Prime> -> Epsilon
+Lexeme: ;		Token: Separator
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement List Prime> -> Epsilon
+Lexeme: t		Token: Identifier
+<Opt Declaration List> => <Empty>
+<Statement List> -> <Statement> <Statement List Prime>
+<Statement> -> <Assign>>
+<Assign> -> <Identifier> = <Expression> ;
+Lexeme: =		Token: Operator
+Lexeme: (		Token: Separator
+<Expression> -> <Term> <Expression Prime>
+<Term> -> <Factor> <Term Prime>
+<Factor> -> <Primary>
+<Primary> -> (<Expression>)
+Lexeme: num1		Token: Identifier
+<Expression> -> <Term> <Expression Prime>
+<Term> -> <Factor> <Term Prime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier>
+Lexeme: +		Token: Operator
+<Term Prime> -> Epsilon
+<Expression Prime>-> + <Term> <Expression Prime>
+Lexeme: num2		Token: Identifier
+<Term> -> <Factor> <Term Prime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier>
+Lexeme: )		Token: Separator
+<Term Prime> -> Epsilon
+<Expression Prime> -> Epsilon
+Lexeme: /		Token: Operator
+<Term Prime> -> * <Factor> <Term Prime>
+Lexeme: num3		Token: Identifier
+<Factor> -> <Primary>
+<Primary> -> <Identifier>
+Lexeme: ;		Token: Separator
+<Term Prime> -> Epsilon
+<Expression Prime> -> Epsilon
